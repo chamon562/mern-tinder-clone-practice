@@ -2,8 +2,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Lets build the MERN TINDER clone!</h1>
+    // BEM class naming convention
+    <div className="app">
+      <h1>Lets build the MERN TINDER clone!</h1>
     </div>
   );
 }
