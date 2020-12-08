@@ -4,7 +4,7 @@
   /* finds the children and space them apart */
   justify-content: space-between;
   z-index: 100;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .header_logo {
