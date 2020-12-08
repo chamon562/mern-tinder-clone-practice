@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  /* finds the children and space them apart */
+  justify-content: space-between;
+  z-index: 100;
+  border-bottom: 1px solid grey;
+}
+
+.header_logo {
+  object-fit: contain;
+  height: 5vh;
+}
