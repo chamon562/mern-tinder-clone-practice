@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TinderCards.css";
-
+import TinderCard from "react-tinder-card";
 function TinderCards() {
     // need some state to keep track and store who these people are
     // intializing useState with an empty array
@@ -17,10 +17,14 @@ function TinderCards() {
     ]);
     return (
         <div className="tinderCards">
-            {/* with jsx squigly bracket{} can say people.map */}
-            {people.map((person) => (
-                <h1>{person.name}</h1>
-            ))}
+            <div className="tinderCards_cardsContainer">
+                {/* with jsx squigly bracket{} can say people.map */}
+                {people.map((person) => (
+                <TinderCard>
+
+                </TinderCard>
+                ))}
+            </div>
         </div>
     );
 }
