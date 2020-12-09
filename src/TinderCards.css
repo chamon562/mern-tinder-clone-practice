@@ -10,5 +10,10 @@
   border-radius: 20px;
   background-size: cover;
   background-position: center;
-  
+}
+
+.tinderCards_cardsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
 }
