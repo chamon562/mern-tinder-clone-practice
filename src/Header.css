@@ -4,10 +4,14 @@
   /* finds the children and space them apart */
   justify-content: space-between;
   z-index: 100;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #f9f9f9;
 }
 
 .header_logo {
   object-fit: contain;
   height: 5vh;
+}
+
+.header_icon {
+    padding: 2vh;
 }
