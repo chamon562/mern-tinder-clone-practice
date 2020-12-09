@@ -16,6 +16,16 @@ function TinderCards() {
             url: "https://i.pinimg.com/236x/ba/a4/9c/baa49ce089fe28e8c03560661f5a39bf.jpg"
         }
     ]);
+
+    const swiped = (direction, nameToDelete) => {
+        console.log("removing: " + nameToDelete);
+        seetLastDirection(direction);
+    }
+
+    const outOfFrame = (name) => {
+        console.log(name + "Left the screen")
+    };
+
     return (
         <div className="tinderCards">
             <div className="tinderCards_cardsContainer">
