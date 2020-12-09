@@ -13,10 +13,12 @@ function TinderCards() {
     ]);
     return (
         <div className="tinderCards">
-            {/* with jsx can say people.map */}
-            
+            {/* with jsx squigly bracket{} can say people.map */}
+            {people.map((person) => (
+                <h1>{person.name}</h1>
+            ))}
         </div>
-    )
+    );
 }
 
 export default TinderCards;
