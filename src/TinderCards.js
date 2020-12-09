@@ -1,5 +1,5 @@
 import React from "react";
-import "./TinderCards.css"
+import "./TinderCards.css";
 
 function TinderCards(){
     return(
