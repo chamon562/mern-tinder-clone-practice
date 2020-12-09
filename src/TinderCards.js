@@ -23,10 +23,10 @@ function TinderCards() {
                 {people.map((person) => (
                     <TinderCard
                         className="swipe"
-                        key={character.name}
+                        key={person.name}
                         preventSwipe={["up", "down"]}
-                        onSwipe={(dir) => swiped(dir, character.name)}
-                        onCardLeftScreen={() => outOfFrame(character.name)}
+                        onSwipe={(dir) => swiped(dir, person.name)}
+                        onCardLeftScreen={() => outOfFrame(person.name)}
                     >
 
                     </TinderCard>
