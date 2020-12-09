@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
+import { SwipeableDrawer } from "@material-ui/core";
 function TinderCards() {
     // need some state to keep track and store who these people are
     // intializing useState with an empty array
@@ -20,9 +21,15 @@ function TinderCards() {
             <div className="tinderCards_cardsContainer">
                 {/* with jsx squigly bracket{} can say people.map */}
                 {people.map((person) => (
-                <TinderCard>
+                    <TinderCard
+                        className="swipe"
+                        key={character.name}
+                        preventSwipe={["up", "down"]}
+                        onSwipe={(dir) => swiped(dir, character.name)}
+                        onCardLeftScreen={() => outOfFrame(character.name)}
+                    >
 
-                </TinderCard>
+                    </TinderCard>
                 ))}
             </div>
         </div>
