@@ -10,18 +10,23 @@ function TinderCards() {
     // this is how you write a variable in react
     const [people, setPeople] = useState([]);
 
-    useEffect(() =>{
+    useEffect(() => {
         // the comma and [] helps when the TinderCards load it will only run it once and not repeatedly
         // if you put [name] in it whenever the variable name changes it will refire this code
         // useEffect is a hook so we have to import it from react
-        
+
         // adding async function
-        async function fetchData(){
+        async function fetchData() {
             // call in our endpoint /tinder/cards 
             // thats because baseURL was made in axios.js
             const request = await axios.get("/tinder/cards")
+
+            // request the data
+            setPeople(req.data);
         }
-    },[]) 
+        // call the set people with fetch data
+        fetchData();
+    }, [])
 
     const swiped = (direction, nameToDelete) => {
         console.log("removing: " + nameToDelete);
