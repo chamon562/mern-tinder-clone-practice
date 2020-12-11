@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
 import { SwipeableDrawer } from "@material-ui/core";
+import axios from "./axios"
 
 function TinderCards() {
     // need some state to keep track and store who these people are
@@ -13,6 +14,13 @@ function TinderCards() {
         // the comma and [] helps when the TinderCards load it will only run it once and not repeatedly
         // if you put [name] in it whenever the variable name changes it will refire this code
         // useEffect is a hook so we have to import it from react
+        
+        // adding async function
+        async function fetchData(){
+            // call in our endpoint /tinder/cards 
+            // thats because baseURL was made in axios.js
+            const request = await axios.get("/tinder/cards")
+        }
     },[]) 
 
     const swiped = (direction, nameToDelete) => {
