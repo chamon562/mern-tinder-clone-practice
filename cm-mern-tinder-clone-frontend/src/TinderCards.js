@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
 import { SwipeableDrawer } from "@material-ui/core";
-import axios from "./axios"
+import axios from "./axios";
 
 function TinderCards() {
     // need some state to keep track and store who these people are
@@ -27,7 +27,7 @@ function TinderCards() {
         // call the set people with fetch data
         fetchData();
     }, [])
-
+    console.log(people)
     const swiped = (direction, nameToDelete) => {
         console.log("removing: " + nameToDelete);
         // will help later on to understand whats going on
@@ -50,7 +50,7 @@ function TinderCards() {
                         onSwipe={(dir) => swiped(dir, person.name)}
                         onCardLeftScreen={() => outOfFrame(person.name)}
                     >
-                        <div style={{ backgroundImage: `url(${person.url})` }}
+                        <div style={{ backgroundImage: `url(${person.imgUrl})` }}
                             className="card"
                         >
                             <h3>{person.name}</h3>
