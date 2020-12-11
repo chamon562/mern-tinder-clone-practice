@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
 import { SwipeableDrawer } from "@material-ui/core";
+
 function TinderCards() {
     // need some state to keep track and store who these people are
     // intializing useState with an empty array
     // this is how you write a variable in react
     const [people, setPeople] = useState([]);
+
+    useEffect(() =>{
+        // the comma and [] helps when the TinderCards load it will only run it once and not repeatedly
+        // if you put [name] in it whenever the variable name changes it will refire this code
+        // useEffect is a hook so we have to import it from react
+    },[]) 
 
     const swiped = (direction, nameToDelete) => {
         console.log("removing: " + nameToDelete);
