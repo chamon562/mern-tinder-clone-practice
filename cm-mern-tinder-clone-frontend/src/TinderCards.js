@@ -19,7 +19,7 @@ function TinderCards() {
         async function fetchData() {
             // call in our endpoint /tinder/cards 
             // thats because baseURL was made in axios.js
-            const request = await axios.get("/tinder/cards")
+            const req = await axios.get("/tinder/cards")
 
             // request the data
             setPeople(req.data);
